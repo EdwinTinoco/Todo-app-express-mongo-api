@@ -10,7 +10,7 @@ const port = process.env.PORT || 5000
 const app = express()
 
 
-mongoose.connect("mongodb://localhost:27017/todo-db",
+mongoose.connect(process.env.MONGODB_URI,
     { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false },
     err => {
         if (err) {
